@@ -1,0 +1,30 @@
+html, body {
+	-webkit-text-size-adjust: none;
+	height: 100%;
+}
+* {
+	font-family: Arial;
+	font-size: 16px;
+	line-height: 19px;
+}
+body {
+	margin: 0px;
+	font-family: Arial;
+	background-color: #fff;
+	width: 100%;
+	color: #000;
+	overflow-x: hidden;
+	font-size: 16px;
+	line-height: 19px;
+
+}
+
+#website {
+	border: 0px solid #ff0000;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	z-index:  10;
+	top: 0px;
+}

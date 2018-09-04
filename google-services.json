@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "985372553835",
+    "firebase_url": "https://bernheine-4e5a5.firebaseio.com",
+    "project_id": "bernheine-4e5a5",
+    "storage_bucket": "bernheine-4e5a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985372553835:android:9bcb1d79db76b6ab",
+        "android_client_info": {
+          "package_name": "com.apfelgold.bernheine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985372553835-a69kg7khr80sl65og66mlcd2mquuau61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjPALI-RbdPgvrkYk2gVv-sYCcG6UR4uo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
