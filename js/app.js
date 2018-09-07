@@ -61,25 +61,22 @@ var init = {
 
 			if(jQuery('#website').attr("src") == "loading.html") {
 				
-				jQuery('#website').attr("src", "https://app.bernheine-medien.de/?login=appuser&token="+final_token+"&os="+os+"&push=1");
+				jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+final_token+"&os="+os+"&push=1");
 			}
 		});
 		
 		push.on('notification', function(data) {	
 			final_token = data.registrationId;
 			if(jQuery('#website').attr("src") == "loading.html") {
-				jQuery('#website').attr("src", "https://app.bernheine-medien.de?login=appuser&token="+final_token+"&os="+os+"&push=1");	
+				jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+final_token+"&os="+os+"&push=1");	
 			}
 			if(data.title && data.message) {
 				website.contentWindow.postMessage(JSON.stringify(data), '*');
 				var token = window.btoa(JSON.stringify(data));
-				jQuery('#website').attr("src", "https://app.bernheine-medien.de/?token="+token);
+				jQuery('#website').attr("src", "http://app.bernheine-medien.de/?token="+token);
 				
 			}
 		});
-		
-		
-		
 		
 		
 		/* cb 19.09 */
@@ -112,7 +109,7 @@ var onSettings = function() {
 			os = 2;
 			//Android
 		}
-		jQuery('#website').attr("src", "https://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
+		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	}
 	
 };
