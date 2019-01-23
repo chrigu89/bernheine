@@ -111,7 +111,6 @@ var onSettings = function() {
 		}
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	} else {
-		alert('Sie lassen keine Speicherung Ihres Zugangs zu. Sie müssen sicher daher erneut einloggen.');
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/");
 	}
 	
