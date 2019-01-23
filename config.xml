@@ -176,14 +176,7 @@
 			<resource-file src="google-services.json" target="google-services.json" />
 		</platform>
 		
-		
 		<plugin name="phonegap-plugin-push" spec="2.0.0" />
-		
-		<feature name="Calendar">
-			<param name="ios-package" value="Calendar" />
-			<param name="android-package" value="nl.xservices.plugins.Calendar" />
-		</feature>
-		
 		<plugin name="cordova-plugin-inappbrowser" />
 		<plugin name="cordova-plugin-network-information" />
 		<plugin name="cordova-plugin-statusbar" />
@@ -201,12 +194,13 @@
 	
 
 
-	<!-- ANDROID -->	
+	<!-- ANDROID 
 		<gap:config-file platform="android" parent="/manifest">
 			<supports-screens android:xlargeScreens="true" android:largeScreens="true" android:smallScreens="true" />
 			<application android:theme="@android:style/Theme.NoTitleBar" >
 				<activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
 			</application>
 		</gap:config-file>
+	-->	
 
 </widget>
