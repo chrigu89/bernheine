@@ -109,8 +109,10 @@ var onSettings = function() {
 			os = 2;
 			//Android
 		}
+		alert('token gefunden');
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	} else {
+		alert('kein token vorhanden');
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/");
 	}
 	

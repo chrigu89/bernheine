@@ -6,13 +6,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "com.apfelgold.bernheine"
-		version   = "1.0.1"
-		android-versionCode = "10001"
-		ios-CFBundleVersion = "1.0.1"
+		version   = "1.0.2"
+		android-versionCode = "10002"
+		ios-CFBundleVersion = "1.0.2"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>10001</string>
+		<string>10002</string>
 	</edit-config>
 
 	<name>Bernheine Medien</name>
@@ -185,22 +185,22 @@
 		
 	<!-- IOS -->
 		
-		<preference name="StatusBarOverlaysWebView" value="false" />
+		<preference name="StatusBarOverlaysWebView" value="true" />
 		<preference name="StatusBarBackgroundColor" value="#000000" />
 		<preference name="StatusBarStyle" value="lightcontent" />
 		
-		<preference name="UIStatusBarHidden" value="yes" />
+		<preference name="UIStatusBarHidden" value="no" />
 		<preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
 	
 
 
-	<!-- ANDROID 
+	<!-- ANDROID -->	
 		<gap:config-file platform="android" parent="/manifest">
 			<supports-screens android:xlargeScreens="true" android:largeScreens="true" android:smallScreens="true" />
 			<application android:theme="@android:style/Theme.NoTitleBar" >
 				<activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
 			</application>
 		</gap:config-file>
-	-->	
+	
 
 </widget>
