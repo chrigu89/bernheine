@@ -119,7 +119,7 @@ var onSettings = function() {
 		alert('kein Token erkannt');
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/");
 	}
-		jQuery('#website').attr("src");
+		alert(jQuery('#website').attr("src"));
 	
 };
 
