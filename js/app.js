@@ -116,10 +116,8 @@ var onSettings = function() {
 		alert(token);
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	} else {
-		alert('kein Token erkannt');
-		jQuery('#website').attr("src", "http://app.bernheine-medien.de/");
+		alert('Zugang wird erstellt, bitte warten.');
 	}
-		alert(jQuery('#website').attr("src"));
 	
 };
 
