@@ -45,41 +45,36 @@ var init = {
 		
 	
 		
-		push.on('registration', function(data) {
-			final_token = data.registrationId;
-			window.localStorage.setItem("token", final_token);
+		// push.on('registration', function(data) {
+			// final_token = data.registrationId;
+			// window.localStorage.setItem("token", final_token);
 			
-			alert('registration');
-			var os = 1;
-			if(final_token.length == 64) {
-				os = 1;
-				//Apple
-			} else {
-				os = 2;
-				//Android
-			}
-			
+			// var os = 1;
+			// if(final_token.length == 64) {
+				// os = 1;
+				// Apple
+			// } else {
+				// os = 2;
+				// Android
+			// }			
 
-			if(jQuery('#website').attr("src") == "loading.html") {
-				
-				jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+final_token+"&os="+os+"&push=1");
-			}
-		});
+			// if(jQuery('#website').attr("src") == "loading.html") {				
+				// jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+final_token+"&os="+os+"&push=1");
+			// }
+		// });
 		
-		push.on('notification', function(data) {	
-			final_token = data.registrationId;
-			if(jQuery('#website').attr("src") == "loading.html") {
-				alert('notification');
-				jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+final_token+"&os="+os+"&push=1");	
-			}
-			if(data.title && data.message) {
-				alert('message');
-				website.contentWindow.postMessage(JSON.stringify(data), '*');
-				var token = window.btoa(JSON.stringify(data));
-				jQuery('#website').attr("src", "http://app.bernheine-medien.de/?token="+token);
+		// push.on('notification', function(data) {	
+			// final_token = data.registrationId;
+			// if(jQuery('#website').attr("src") == "loading.html") {
+				// jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+final_token+"&os="+os+"&push=1");	
+			// }
+			// if(data.title && data.message) {
+				// website.contentWindow.postMessage(JSON.stringify(data), '*');
+				// var token = window.btoa(JSON.stringify(data));
+				// jQuery('#website').attr("src", "http://app.bernheine-medien.de/?token="+token);
 				
-			}
-		});
+			// }
+		// });
 		
 		
 		/* cb 19.09 */
@@ -100,23 +95,25 @@ var init = {
 init.initialize();
 
 
+function makeid(length) {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < length; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
 
 var onSettings = function() {
 	var token = window.localStorage.getItem("token");
+	var os = 3;
 	if(typeof token != "undefined" && token != null) {
-		alert('token erkannt');
-		var os = 1;
-		if(token.length == 64) {
-			os = 1;
-			//Apple
-		} else {
-			os = 2;
-			//Android
-		}
-		alert(token);
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	} else {
-		alert('Zugang wird erstellt, bitte warten.');
+		token = makeid(30);
+		window.localStorage.setItem("token", token);
+		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	}
 	
 };
