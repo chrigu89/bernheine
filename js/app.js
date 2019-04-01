@@ -115,7 +115,6 @@ var onSettings = function() {
 		window.localStorage.setItem("token", token);
 		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	}
-	alert(jQuery('#website').outerHeight());
 	
 };
 
