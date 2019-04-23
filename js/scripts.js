@@ -1,9 +1,6 @@
-jQuery(document).ready(function() {
-	//if($('#website').attr("src") == "loading.html") {
-	//	$('#website').attr("src", "http://app.zimmersuche.ch/");	
-	//} 
-});
+
 
 window.addEventListener('message',function(event) {
-   alert(event.data); // call function here
+   url = event.data;
+   var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
 },false);
