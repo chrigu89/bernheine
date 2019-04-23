@@ -3,3 +3,7 @@ jQuery(document).ready(function() {
 	//	$('#website').attr("src", "http://app.zimmersuche.ch/");	
 	//} 
 });
+
+window.addEventListener('message',function(event) {
+   alert(event.data); // call function here
+},false);
