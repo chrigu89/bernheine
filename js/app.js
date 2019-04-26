@@ -1,19 +1,7 @@
 'use strict';
 
 var init = {
-	initialize: function() {
-
-		alert('init.initialize');
-		console.log('init.initialize');
-
-		if (document.location.protocol == "file:") {
-			// file protocol indicates phonegap
-			document.addEventListener("deviceready", init.onDeviceReady, false);
-		} else {
-			// browser on localhost, no phonegap
-			init.onDomReady();
-		}
-	},
+	
 	onDeviceReady: function() {
 		alert('onDeviceReady');
 		var ref = window.open(encodeURI("https://google.com"), '_blank', 'location=no,enableViewPortScale=yes');
@@ -77,17 +65,9 @@ var init = {
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
 
-	},
-	onDomReady: function() {
-		alert('onDomReady');
-		console.log('init.onDomReady ❤ running on DESKTOP');
-		init.run();
-	},
-	run: function() {
-		console.log('init.run');
 	}
 };
-init.initialize();
+init.onDeviceReady();
 
 
 function makeid(length) {
