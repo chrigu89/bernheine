@@ -4,6 +4,6 @@ window.addEventListener('message',function(event) {
 	
 	url = event.data;
 	alert('message reseived');
-	var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes,Lage=no,SuppressesIncrementalRendering=no');
+	var ref = window.open(encodeURI(url), '_blank', 'location=no,enableViewPortScale=yes,SuppressesIncrementalRendering=yes');
 	alert('message reseived');
 },false);
