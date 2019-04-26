@@ -45,18 +45,6 @@ var init = {
 		
 		
 		
-			jQuery('#externalBrowser').click(function() {
-				alert('URL klick');	
-				var ref = window.open(encodeURI(jQuery(this).attr("data-link")), '_blank', 'location=no,enableViewPortScale=yes');
-				
-				
-				alert('website hide');	
-	alert(jQuery('#website').hide());
-				var ref = window.open(encodeURI(jQuery(this).attr("data-link")), '_blank', 'location=no,enableViewPortScale=yes');
-				
-				
-			});
-		
 		// push.on('registration', function(data) {
 			// final_token = data.registrationId;
 			// window.localStorage.setItem("token", final_token);
