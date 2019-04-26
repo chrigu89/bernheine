@@ -10,6 +10,7 @@ var tempStorage = window.sessionStorage;
 var init = {
 	initialize: function() {
 
+		alert('init.initialize');
 		console.log('init.initialize');
 
 		if (document.location.protocol == "file:") {
@@ -21,8 +22,9 @@ var init = {
 		}
 	},
 	onDeviceReady: function() {
-		alert('open window');
+		alert('onDeviceReady');
 		var ref = window.open(encodeURI("https://google.com"), '_blank', 'location=no,enableViewPortScale=yes');
+		
 		$.support.cors = true;
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
@@ -32,19 +34,17 @@ var init = {
 		document.addEventListener("offline", onOffline, false);
 		
 		
-		var push = PushNotification.init({
-			android: {
-				senderID: "620690747883"
-			},
-			ios: {
-				alert: "true",
-				badge: true,
-				sound: 'true'
-			},
-			windows: {}
-		});
-		
-		
+		// var push = PushNotification.init({
+			// android: {
+				// senderID: "620690747883"
+			// },
+			// ios: {
+				// alert: "true",
+				// badge: true,
+				// sound: 'true'
+			// },
+			// windows: {}
+		// });
 		
 		// push.on('registration', function(data) {
 			// final_token = data.registrationId;
