@@ -9,7 +9,6 @@ var init = {
 		$.support.cors = true;
 		
 		console.log('init.onDeviceReady ❤ running on DEVICE');
-		init.run();
 
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
@@ -80,7 +79,7 @@ function makeid(length) {
   return text;
 }
 
-var onSettings = function() {
+function onSettings() {
 	var token = window.localStorage.getItem("token");
 	var os = 3;
 	if(typeof token != "undefined" && token != null) {

@@ -83,11 +83,12 @@
 <a href="" id="externalBrowser">open browser</a>
 <script>
 	alert('test');
-jQuery('#externalBrowser').click(fnction() {
-	var ref = window.open(encodeURI("https://google.com"), '_blank', 'location=no,enableViewPortScale=yes');
-	return false;
 	
-});
+	jQuery('#externalBrowser').click(function() {
+		var ref = window.open(encodeURI("https://google.com"), '_blank', 'location=no,enableViewPortScale=yes');
+		return false;
+		
+	});
 </script>
 <!-- <iframe id="website" src="loading.html" scrolling="yes" frameborder="0"></iframe> -->
 <script src="js/app.js"></script>
