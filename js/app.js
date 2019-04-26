@@ -1,9 +1,5 @@
 'use strict';
 
-
-var pushNotification;
-var final_token;
-
 var init = {
 	initialize: function() {
 
@@ -76,7 +72,7 @@ var init = {
 		
 		
 		/* cb 19.09 */
-		$(document).bind("mobileinit", function () { $.mobile.defaultPageTransition = 'none'; });
+		// $(document).bind("mobileinit", function () { $.mobile.defaultPageTransition = 'none'; });
 	
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onFail);  // TEMPORARY oder PERSISTENT
 
@@ -117,7 +113,6 @@ var onSettings = function() {
 	
 };
 
-
 // Dateisystem erfolgreich geladen!
 function onFileSystemSuccess(fileSystem) {
 	
@@ -153,14 +148,4 @@ function onOffline() {
 		document.getElementById('offline').css('display', 'block');
 	}
 	
-}
-
-
-function successHandler (result) {
-	//$("#app-status-ul").append('<li>success:'+ result +'</li>');
-}
-
-
-function errorHandler (error) {
-	//$("#app-status-ul").append('<li>error:'+ error +'</li>');
 }
