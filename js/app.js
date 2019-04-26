@@ -4,9 +4,6 @@
 var pushNotification;
 var final_token;
 
-var permanentStorage = window.localStorage;
-var tempStorage = window.sessionStorage;
-
 var init = {
 	initialize: function() {
 
@@ -86,6 +83,7 @@ var init = {
 
 	},
 	onDomReady: function() {
+		alert('onDomReady');
 		console.log('init.onDomReady ❤ running on DESKTOP');
 		init.run();
 	},
@@ -138,29 +136,6 @@ function onFileSystemSuccess(fileSystem) {
 function onGetFileSuccess(fileEntry) {
 	var path = fileEntry.toURL().replace('index.html', ''); // URL der offenen Datei!
 
-}
-
-// PDF Anzeigen
-function showPDF(url) {
-	//window.resolveLocalFileSystemURI(url, onResolveSuccess, onFail); <- Klappt
-	cordova.plugins.fileOpener2.open(
-		url, // e.g. '/var/mobile/Applications/XXXXXXXXX/Library/files/mypdf.pdf'
-		'application/pdf', {
-			error: function(errorObj) {
-				alert('Error status: ' + errorObj.status + ' - Error message: ' + errorObj.message);
-			},
-			success: function() {
-				//alert('Datei erfolgreich geladen');
-			}
-		}
-	);
-}
-
-
-function onResolveSuccess(fileEntry){
-	alert(fileEntry.name);	
-	alert(fileEntry.fullPath);	
-	alert(fileEntry.filesystem);	
 }
 
 function onFail(error){
