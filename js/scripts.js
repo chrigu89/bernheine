@@ -1,7 +1,9 @@
 
 
 window.addEventListener('message',function(event) {
+	
+	url = event.data;
 	alert('message reseived');
-   url = event.data;
-   var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes');
+	var ref = window.open(url, '_blank', 'location=yes,enableViewPortScale=yes,Lage=no,SuppressesIncrementalRendering?=no');
+	alert('message reseived');
 },false);

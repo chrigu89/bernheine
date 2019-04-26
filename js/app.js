@@ -43,7 +43,6 @@ var init = {
 			windows: {}
 		});
 		
-	
 		
 		// push.on('registration', function(data) {
 			// final_token = data.registrationId;
