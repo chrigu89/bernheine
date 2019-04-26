@@ -47,8 +47,9 @@ var init = {
 		
 			jQuery('#externalBrowser').click(function() {
 				alert('URL klick');
-				var ref = window.open(encodeURI(jQuery(this).attr("data-link")), '_blank', 'location=no,enableViewPortScale=yes,SuppressesIncrementalRendering=yes');
-				return false;
+	
+				var ref = window.open(encodeURI(jQuery(this).attr("data-link")), '_blank', 'location=no,enableViewPortScale=yes');
+				
 				
 			});
 		
