@@ -3,8 +3,6 @@
 var init = {
 	
 	onDeviceReady: function() {
-		alert('onDeviceReady');
-		var ref = window.open(encodeURI("https://google.com"), '_blank', 'location=no,enableViewPortScale=yes');
 		
 		$.support.cors = true;
 		
