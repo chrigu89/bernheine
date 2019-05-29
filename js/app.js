@@ -81,11 +81,11 @@ function onSettings() {
 	var token = window.localStorage.getItem("token");
 	var os = 3;
 	if(typeof token != "undefined" && token != null) {
-		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
+		jQuery('#website').attr("src", "https://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	} else {
 		token = makeid(30);
 		window.localStorage.setItem("token", token);
-		jQuery('#website').attr("src", "http://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
+		jQuery('#website').attr("src", "https://app.bernheine-medien.de/?login=appuser&token="+token+"&os="+os+"&push=1");
 	}
 	
 };
