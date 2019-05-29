@@ -6,13 +6,13 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "com.apfelgold.bernheine"
-		version   = "1.0.7"
-		android-versionCode = "10070"
-		ios-CFBundleVersion = "1.0.7"
+		version   = "1.0.8"
+		android-versionCode = "10080"
+		ios-CFBundleVersion = "1.0.8"
 		>
 		
 	<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="overwrite">
-		<string>10070</string>
+		<string>10080</string>
 	</edit-config>
 
 	<name>Bernheine Medien</name>
